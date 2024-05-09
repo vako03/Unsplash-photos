@@ -14,7 +14,7 @@ class PhotoGalleryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "გალერეა"
         setupCollectionView()
         viewModel.fetchImages {
             DispatchQueue.main.async {
