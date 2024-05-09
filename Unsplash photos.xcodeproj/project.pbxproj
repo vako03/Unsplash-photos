@@ -20,6 +20,10 @@
 		1A49FEA42BEC491800C57256 /* UIImageView+LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49FEA32BEC491800C57256 /* UIImageView+LoadImage.swift */; };
 		1A49FEA62BEC4DB800C57256 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49FEA52BEC4DB800C57256 /* ImageViewModel.swift */; };
 		1A49FEA82BEC525A00C57256 /* UnsplashResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49FEA72BEC525A00C57256 /* UnsplashResponse.swift */; };
+		1A49FEB62BECFC7900C57256 /* PhotoGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49FEB52BECFC7900C57256 /* PhotoGalleryViewModel.swift */; };
+		1A49FEB82BECFE6600C57256 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49FEB72BECFE6600C57256 /* ImageModel.swift */; };
+		1A49FEBA2BECFFDC00C57256 /* FullScreenImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49FEB92BECFFDC00C57256 /* FullScreenImageViewModel.swift */; };
+		1A49FEBC2BED003600C57256 /* SwipeGestureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49FEBB2BED003600C57256 /* SwipeGestureHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		1A49FEA32BEC491800C57256 /* UIImageView+LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadImage.swift"; sourceTree = "<group>"; };
 		1A49FEA52BEC4DB800C57256 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
 		1A49FEA72BEC525A00C57256 /* UnsplashResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashResponse.swift; sourceTree = "<group>"; };
+		1A49FEB52BECFC7900C57256 /* PhotoGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewModel.swift; sourceTree = "<group>"; };
+		1A49FEB72BECFE6600C57256 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		1A49FEB92BECFFDC00C57256 /* FullScreenImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewModel.swift; sourceTree = "<group>"; };
+		1A49FEBB2BED003600C57256 /* SwipeGestureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeGestureHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				1A49FE8F2BEC010E00C57256 /* ImageDescription.swift */,
+				1A49FEB72BECFE6600C57256 /* ImageModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -98,6 +107,7 @@
 			children = (
 				1A49FE7D2BEBFCD700C57256 /* PhotoGalleryViewController.swift */,
 				1A49FEA52BEC4DB800C57256 /* ImageViewModel.swift */,
+				1A49FEB52BECFC7900C57256 /* PhotoGalleryViewModel.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -107,6 +117,7 @@
 			children = (
 				1A49FE952BEC022900C57256 /* FullScreenImageViewController.swift */,
 				1A49FE932BEC013600C57256 /* ImageCell.swift */,
+				1A49FEB92BECFFDC00C57256 /* FullScreenImageViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				1A49FEA32BEC491800C57256 /* UIImageView+LoadImage.swift */,
+				1A49FEBB2BED003600C57256 /* SwipeGestureHandler.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -210,12 +222,16 @@
 				1A49FE902BEC010E00C57256 /* ImageDescription.swift in Sources */,
 				1A49FE942BEC013600C57256 /* ImageCell.swift in Sources */,
 				1A49FE7E2BEBFCD700C57256 /* PhotoGalleryViewController.swift in Sources */,
+				1A49FEB62BECFC7900C57256 /* PhotoGalleryViewModel.swift in Sources */,
 				1A49FEA42BEC491800C57256 /* UIImageView+LoadImage.swift in Sources */,
 				1A49FE962BEC022900C57256 /* FullScreenImageViewController.swift in Sources */,
 				1A49FEA12BEC48F700C57256 /* APIService.swift in Sources */,
 				1A49FEA62BEC4DB800C57256 /* ImageViewModel.swift in Sources */,
+				1A49FEBA2BECFFDC00C57256 /* FullScreenImageViewModel.swift in Sources */,
 				1A49FE7A2BEBFCD700C57256 /* AppDelegate.swift in Sources */,
+				1A49FEBC2BED003600C57256 /* SwipeGestureHandler.swift in Sources */,
 				1A49FE7C2BEBFCD700C57256 /* SceneDelegate.swift in Sources */,
+				1A49FEB82BECFE6600C57256 /* ImageModel.swift in Sources */,
 				1A49FE9E2BEC484A00C57256 /* PhotoAPIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

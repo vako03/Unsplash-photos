@@ -8,20 +8,11 @@
 import UIKit
 
 class PhotoGalleryViewController: UIViewController {
-    let viewModel = ImageViewModel()
+    let viewModel = PhotoGalleryViewModel()
     var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Set up navigation bar title
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.blue]
-        title = "გალერეა"
-        
-        // Set title font size and style
-        if let titleLabel = self.navigationItem.titleView as? UILabel {
-            titleLabel.font = UIFont.boldSystemFont(ofSize: 32)
-        }
         
         setupCollectionView()
         viewModel.fetchImages {
@@ -33,9 +24,9 @@ class PhotoGalleryViewController: UIViewController {
     
     func setupCollectionView() {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical // Ensure vertical scrolling
+        layout.scrollDirection = .vertical
         let spacing: CGFloat = 2.0
-        let itemWidth = (UIScreen.main.bounds.width - (spacing * 4)) / 3 // Calculate width for 3 items with spacing
+        let itemWidth = (UIScreen.main.bounds.width - (spacing * 4)) / 3
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
         layout.minimumInteritemSpacing = spacing
         layout.minimumLineSpacing = spacing
@@ -51,19 +42,19 @@ class PhotoGalleryViewController: UIViewController {
 
 extension PhotoGalleryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.imageUrls.count
+        return viewModel.imageModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! ImageCell
-        cell.imageUrl = viewModel.imageUrls[indexPath.item]
+        cell.imageUrl = viewModel.imageURL(at: indexPath.item)
         return cell
     }
 }
 
 extension PhotoGalleryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let fullScreenViewController = FullScreenImageViewController(imageUrls: viewModel.imageUrls, initialIndex: indexPath.item)
+        let fullScreenViewController = FullScreenImageViewController(viewModel: viewModel, initialIndex: indexPath.item)
         navigationController?.pushViewController(fullScreenViewController, animated: true)
     }
 }

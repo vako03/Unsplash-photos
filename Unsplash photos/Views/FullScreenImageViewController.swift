@@ -7,17 +7,20 @@
 import UIKit
 
 class FullScreenImageViewController: UIViewController {
+    let viewModel: PhotoGalleryViewModel
     let scrollView = UIScrollView()
     var imageViews: [UIImageView] = []
     var currentPageIndex = 0
     
-    init(imageUrls: [String], initialIndex: Int) {
+    init(viewModel: PhotoGalleryViewModel, initialIndex: Int) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        imageUrls.forEach { imageUrl in
+        
+        viewModel.imageModels.forEach { imageModel in
             let imageView = UIImageView()
             imageView.contentMode = .scaleAspectFit
             imageView.clipsToBounds = true
-            imageView.loadImage(from: imageUrl)
+            imageView.loadImage(from: imageModel.url)
             imageViews.append(imageView)
         }
         currentPageIndex = initialIndex
