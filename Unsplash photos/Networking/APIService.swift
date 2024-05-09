@@ -13,3 +13,4 @@ struct APIService {
     static let perPage = 33
     static var currentPage = 1
 }
+//MARKS 

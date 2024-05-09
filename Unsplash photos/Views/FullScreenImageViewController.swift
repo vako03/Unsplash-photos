@@ -4,26 +4,25 @@
 //
 //  Created by valeri mekhashishvili on 08.05.24.
 //
+
 import UIKit
 
 class FullScreenImageViewController: UIViewController {
-    let viewModel: PhotoGalleryViewModel
-    let scrollView = UIScrollView()
+    let viewModel: FullScreenImageViewModel
+    var scrollView = UIScrollView()
     var imageViews: [UIImageView] = []
-    var currentPageIndex = 0
     
-    init(viewModel: PhotoGalleryViewModel, initialIndex: Int) {
+    init(viewModel: FullScreenImageViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         
-        viewModel.imageModels.forEach { imageModel in
+        viewModel.imageUrls.forEach { imageUrl in
             let imageView = UIImageView()
             imageView.contentMode = .scaleAspectFit
             imageView.clipsToBounds = true
-            imageView.loadImage(from: imageModel.url)
+            imageView.loadImage(from: imageUrl)
             imageViews.append(imageView)
         }
-        currentPageIndex = initialIndex
     }
     
     required init?(coder: NSCoder) {
@@ -32,9 +31,13 @@ class FullScreenImageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupUI()
+    }
+    
+    func setupUI() {
         view.backgroundColor = .black
         
+        scrollView = UIScrollView(frame: view.bounds)
         scrollView.delegate = self
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
@@ -61,31 +64,33 @@ class FullScreenImageViewController: UIViewController {
         super.viewDidLayoutSubviews()
         scrollView.frame = view.bounds
         scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(imageViews.count), height: view.frame.height)
-        scrollView.contentOffset = CGPoint(x: view.frame.width * CGFloat(currentPageIndex), y: 0)
         
         for (index, imageView) in imageViews.enumerated() {
             imageView.frame = CGRect(x: CGFloat(index) * view.frame.width, y: 0, width: view.frame.width, height: scrollView.frame.height)
         }
+        
+        let initialOffsetX = CGFloat(viewModel.currentPageIndex) * view.frame.width
+        scrollView.contentOffset = CGPoint(x: initialOffsetX, y: 0)
     }
     
     @objc func handleSwipe(_ sender: UISwipeGestureRecognizer) {
         guard let scrollView = sender.view as? UIScrollView else { return }
         
+        var nextPageIndex = viewModel.currentPageIndex
         if sender.direction == .left {
-            let nextPageIndex = min(currentPageIndex + 1, imageViews.count - 1)
-            scrollView.setContentOffset(CGPoint(x: view.frame.width * CGFloat(nextPageIndex), y: 0), animated: true)
-            currentPageIndex = nextPageIndex
+            nextPageIndex = min(viewModel.currentPageIndex + 1, imageViews.count - 1)
         } else if sender.direction == .right {
-            let prevPageIndex = max(currentPageIndex - 1, 0)
-            scrollView.setContentOffset(CGPoint(x: view.frame.width * CGFloat(prevPageIndex), y: 0), animated: true)
-            currentPageIndex = prevPageIndex
+            nextPageIndex = max(viewModel.currentPageIndex - 1, 0)
         }
+        
+        scrollView.setContentOffset(CGPoint(x: view.frame.width * CGFloat(nextPageIndex), y: 0), animated: true)
+        viewModel.currentPageIndex = nextPageIndex
     }
 }
 
 extension FullScreenImageViewController: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageIndex = Int(scrollView.contentOffset.x / scrollView.frame.width)
-        currentPageIndex = pageIndex
+        viewModel.currentPageIndex = pageIndex
     }
 }

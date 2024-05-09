@@ -1,5 +1,5 @@
 //
-//  Cell.swift
+//  ImageCell.swift
 //  Unsplash photos
 //
 //  Created by valeri mekhashishvili on 08.05.24.

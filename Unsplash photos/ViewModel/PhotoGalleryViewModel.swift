@@ -8,12 +8,12 @@
 import Foundation
 
 class PhotoGalleryViewModel {
-    var imageModels: [ImageModel] = [] // Change access level to 'internal'
+    var imageModels: [ImageModel] = []
     
     func fetchImages(completion: @escaping () -> Void) {
         let photoAPIManager = PhotoAPIManager()
-        photoAPIManager.fetchImages { [weak self] urls in
-            self?.imageModels = urls.map { ImageModel(url: $0) }
+        photoAPIManager.fetchImages { [weak self] imageUrls in
+            self?.imageModels = imageUrls.map { ImageModel(url: $0) }
             completion()
         }
     }
@@ -24,5 +24,8 @@ class PhotoGalleryViewModel {
         }
         return imageModels[index].url
     }
+    
+    func imageItems() -> [ImageItem] {
+        return imageModels.map { ImageItem(id: $0.url, url: $0.url) }
+    }
 }
-
