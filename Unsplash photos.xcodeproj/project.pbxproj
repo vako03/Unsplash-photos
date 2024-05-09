@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		1A49FE7A2BEBFCD700C57256 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49FE792BEBFCD700C57256 /* AppDelegate.swift */; };
 		1A49FE7C2BEBFCD700C57256 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49FE7B2BEBFCD700C57256 /* SceneDelegate.swift */; };
-		1A49FE7E2BEBFCD700C57256 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49FE7D2BEBFCD700C57256 /* ViewController.swift */; };
-		1A49FE812BEBFCD700C57256 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1A49FE802BEBFCD700C57256 /* Base */; };
+		1A49FE7E2BEBFCD700C57256 /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49FE7D2BEBFCD700C57256 /* PhotoGalleryViewController.swift */; };
 		1A49FE832BEBFCDB00C57256 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A49FE822BEBFCDB00C57256 /* Assets.xcassets */; };
 		1A49FE862BEBFCDB00C57256 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1A49FE852BEBFCDB00C57256 /* Base */; };
+		1A49FE902BEC010E00C57256 /* ImageDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49FE8F2BEC010E00C57256 /* ImageDescription.swift */; };
+		1A49FE942BEC013600C57256 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49FE932BEC013600C57256 /* ImageCell.swift */; };
+		1A49FE962BEC022900C57256 /* FullScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49FE952BEC022900C57256 /* FullScreenImageViewController.swift */; };
+		1A49FE9E2BEC484A00C57256 /* PhotoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49FE9D2BEC484A00C57256 /* PhotoAPIManager.swift */; };
+		1A49FEA12BEC48F700C57256 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49FEA02BEC48F700C57256 /* APIService.swift */; };
+		1A49FEA42BEC491800C57256 /* UIImageView+LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49FEA32BEC491800C57256 /* UIImageView+LoadImage.swift */; };
+		1A49FEA62BEC4DB800C57256 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49FEA52BEC4DB800C57256 /* ImageViewModel.swift */; };
+		1A49FEA82BEC525A00C57256 /* UnsplashResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49FEA72BEC525A00C57256 /* UnsplashResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A49FE762BEBFCD700C57256 /* Unsplash photos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unsplash photos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A49FE792BEBFCD700C57256 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A49FE7B2BEBFCD700C57256 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1A49FE7D2BEBFCD700C57256 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1A49FE802BEBFCD700C57256 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1A49FE7D2BEBFCD700C57256 /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
 		1A49FE822BEBFCDB00C57256 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A49FE852BEBFCDB00C57256 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A49FE872BEBFCDB00C57256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A49FE8F2BEC010E00C57256 /* ImageDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDescription.swift; sourceTree = "<group>"; };
+		1A49FE932BEC013600C57256 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		1A49FE952BEC022900C57256 /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
+		1A49FE9D2BEC484A00C57256 /* PhotoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPIManager.swift; sourceTree = "<group>"; };
+		1A49FEA02BEC48F700C57256 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		1A49FEA32BEC491800C57256 /* UIImageView+LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadImage.swift"; sourceTree = "<group>"; };
+		1A49FEA52BEC4DB800C57256 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
+		1A49FEA72BEC525A00C57256 /* UnsplashResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,70 @@
 		1A49FE782BEBFCD700C57256 /* Unsplash photos */ = {
 			isa = PBXGroup;
 			children = (
+				1A49FE992BEC47DC00C57256 /* Models */,
+				1A49FE9B2BEC481700C57256 /* Views */,
+				1A49FE9A2BEC47F600C57256 /* Controller */,
+				1A49FE9C2BEC484100C57256 /* Networking */,
+				1A49FE9F2BEC48D100C57256 /* Services */,
+				1A49FEA22BEC490700C57256 /* Extensions */,
 				1A49FE792BEBFCD700C57256 /* AppDelegate.swift */,
 				1A49FE7B2BEBFCD700C57256 /* SceneDelegate.swift */,
-				1A49FE7D2BEBFCD700C57256 /* ViewController.swift */,
-				1A49FE7F2BEBFCD700C57256 /* Main.storyboard */,
 				1A49FE822BEBFCDB00C57256 /* Assets.xcassets */,
 				1A49FE842BEBFCDB00C57256 /* LaunchScreen.storyboard */,
 				1A49FE872BEBFCDB00C57256 /* Info.plist */,
 			);
 			path = "Unsplash photos";
+			sourceTree = "<group>";
+		};
+		1A49FE992BEC47DC00C57256 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A49FE8F2BEC010E00C57256 /* ImageDescription.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1A49FE9A2BEC47F600C57256 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1A49FE7D2BEBFCD700C57256 /* PhotoGalleryViewController.swift */,
+				1A49FEA52BEC4DB800C57256 /* ImageViewModel.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1A49FE9B2BEC481700C57256 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A49FE952BEC022900C57256 /* FullScreenImageViewController.swift */,
+				1A49FE932BEC013600C57256 /* ImageCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1A49FE9C2BEC484100C57256 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1A49FE9D2BEC484A00C57256 /* PhotoAPIManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1A49FE9F2BEC48D100C57256 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1A49FEA02BEC48F700C57256 /* APIService.swift */,
+				1A49FEA72BEC525A00C57256 /* UnsplashResponse.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1A49FEA22BEC490700C57256 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1A49FEA32BEC491800C57256 /* UIImageView+LoadImage.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +196,6 @@
 			files = (
 				1A49FE832BEBFCDB00C57256 /* Assets.xcassets in Resources */,
 				1A49FE862BEBFCDB00C57256 /* Base in Resources */,
-				1A49FE812BEBFCD700C57256 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +206,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A49FE7E2BEBFCD700C57256 /* ViewController.swift in Sources */,
+				1A49FEA82BEC525A00C57256 /* UnsplashResponse.swift in Sources */,
+				1A49FE902BEC010E00C57256 /* ImageDescription.swift in Sources */,
+				1A49FE942BEC013600C57256 /* ImageCell.swift in Sources */,
+				1A49FE7E2BEBFCD700C57256 /* PhotoGalleryViewController.swift in Sources */,
+				1A49FEA42BEC491800C57256 /* UIImageView+LoadImage.swift in Sources */,
+				1A49FE962BEC022900C57256 /* FullScreenImageViewController.swift in Sources */,
+				1A49FEA12BEC48F700C57256 /* APIService.swift in Sources */,
+				1A49FEA62BEC4DB800C57256 /* ImageViewModel.swift in Sources */,
 				1A49FE7A2BEBFCD700C57256 /* AppDelegate.swift in Sources */,
 				1A49FE7C2BEBFCD700C57256 /* SceneDelegate.swift in Sources */,
+				1A49FE9E2BEC484A00C57256 /* PhotoAPIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1A49FE7F2BEBFCD700C57256 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1A49FE802BEBFCD700C57256 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1A49FE842BEBFCDB00C57256 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +365,6 @@
 				INFOPLIST_FILE = "Unsplash photos/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +392,6 @@
 				INFOPLIST_FILE = "Unsplash photos/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
